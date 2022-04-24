@@ -28,7 +28,7 @@ export const Quotes = () => {
     <div className="app">
       <h2>The Simpsons Quote Generator v2</h2>
       <h4>(Mostly Homer)</h4>
-      <div className="container" style={{ backgroundImage: `url(${quote.image})`, backgroundRepeat: 'no-repeat', backgroundPosition: `right top` }}>
+      <div className="container" style={{ background: `url(${quote.image}) no-repeat right top` }}>
         <div className="quotes">
           {quote.content.length > 0 && (
             <div>

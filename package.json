@@ -7,11 +7,10 @@
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.1.2",
     "framer-motion": "^1.7.0",
-    "gh-pages": "^2.2.0",
+    "gh-pages": "^3.2.3",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-scripts": "3.3.0",
-    "styled-components": "^5.3.5"
+    "react-scripts": "3.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -21,7 +20,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://nomennescio1.github.io/quotes-release",
+  "homepage": "https://nomennescio1.github.io/quotes-app",
   "eslintConfig": {
     "extends": "react-app"
   },

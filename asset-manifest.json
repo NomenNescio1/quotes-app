@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/quotes-app/static/css/main.a8667e55.chunk.css",
-    "main.js": "/quotes-app/static/js/main.6e1e8469.chunk.js",
-    "main.js.map": "/quotes-app/static/js/main.6e1e8469.chunk.js.map",
+    "main.js": "/quotes-app/static/js/main.19ee9222.chunk.js",
+    "main.js.map": "/quotes-app/static/js/main.19ee9222.chunk.js.map",
     "runtime-main.js": "/quotes-app/static/js/runtime-main.df4e3e46.js",
     "runtime-main.js.map": "/quotes-app/static/js/runtime-main.df4e3e46.js.map",
     "static/js/2.160585df.chunk.js": "/quotes-app/static/js/2.160585df.chunk.js",
     "static/js/2.160585df.chunk.js.map": "/quotes-app/static/js/2.160585df.chunk.js.map",
     "index.html": "/quotes-app/index.html",
-    "precache-manifest.e1792ff7b745a8ab015aaadcbac86c21.js": "/quotes-app/precache-manifest.e1792ff7b745a8ab015aaadcbac86c21.js",
+    "precache-manifest.f9698e761093d18497701ad8e0863b43.js": "/quotes-app/precache-manifest.f9698e761093d18497701ad8e0863b43.js",
     "service-worker.js": "/quotes-app/service-worker.js",
     "static/css/main.a8667e55.chunk.css.map": "/quotes-app/static/css/main.a8667e55.chunk.css.map",
     "static/js/2.160585df.chunk.js.LICENSE": "/quotes-app/static/js/2.160585df.chunk.js.LICENSE"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.df4e3e46.js",
     "static/js/2.160585df.chunk.js",
     "static/css/main.a8667e55.chunk.css",
-    "static/js/main.6e1e8469.chunk.js"
+    "static/js/main.19ee9222.chunk.js"
   ]
 }

@@ -1,0 +1,3 @@
+module.exports=[27572,a=>{"use strict";var b=a.i(7997);function c({children:a}){return(0,b.jsx)("html",{lang:"en",children:(0,b.jsxs)("body",{children:[(0,b.jsx)("noscript",{children:"You need to enable JavaScript to run this app."}),(0,b.jsx)("div",{id:"root",children:a})]})})}a.s(["default",()=>c,"metadata",0,{title:"Quotes v3",description:"Web site created with Next.js."}])}];
+
+//# sourceMappingURL=src_app_layout_tsx_cc8184fa._.js.map

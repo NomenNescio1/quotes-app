@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { Quotes } from './Quotes';
+import { Quotes } from './app';
 
 test('renders Simpsons quote generator', () => {
   render(<Quotes />);

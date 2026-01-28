@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useSimpsonsQuote } from './hooks/useSimpsonsQuote';
 import './App.css';
 
-export const Quotes = () => {
+export default function Quotes() {
   const { quote, loading, error, refetch } = useSimpsonsQuote();
   const IMG_PATH = "https://cdn.thesimpsonsapi.com/500"
 

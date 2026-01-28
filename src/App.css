@@ -1,8 +1,9 @@
-.App {
-  text-align: center;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.app{
+/* Main App Styles */
+.app {
   background-color: #FFD90F;
   min-height: 100vh;
   display: flex;
@@ -10,60 +11,214 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 1.5vmin);
+  text-align: center;
 }
+
+/* Header Styles */
+.app header {
+  margin-bottom: 2rem;
+}
+
+.app h2 {
+  margin: 0 0 0.5rem 0;
+  color: #000;
+}
+
+.app h4 {
+  margin: 0;
+  color: #333;
+  font-weight: normal;
+}
+
+/* Quote Container */
+.quote-container {
+  background-image: var(--quote-image, none);
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: contain;
+  min-height: 200px;
+}
+
 .quotes {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   color: black;
   border-radius: 20px;
   width: 40vw;
   padding: 20px;
-  -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
-  -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
-  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  position: relative;
 }
-.actual-quote{
-  transition:  opacity 1.5s;
+
+/* Quote Content */
+.quote-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 blockquote {
   margin: 0;
+  text-align: left;
+  max-width: 90%;
 }
-footer {
-  display: block;
-  font-size: 80%;
-  color: #6c757d;
-}
+
 blockquote p {
   padding: 15px;
   border-radius: 5px;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  position: relative;
 }
 
 blockquote p::before {
   content: '\201C';
-}
-h2 {
-  margin: 0;
+  font-size: 2rem;
+  color: #666;
+  position: absolute;
+  left: -10px;
+  top: -5px;
 }
 
-.new-quote {
-  width: 100px;
+blockquote footer {
   display: block;
-  margin: 10px auto;
-  -webkit-app-region: none;
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-top: 10px;
+  text-align: right;
+  font-style: italic;
+}
+
+/* Button Styles */
+.new-quote {
+  display: inline-block;
+  margin: 20px auto 0;
   border: none;
   background-color: #ffd90f;
   color: black;
-  padding: 15px;
-  font-size: 15px;
-  -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
-  -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
-  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
-}
-.new-quote:active {
-  box-shadow: none;
+  padding: 15px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  min-width: 150px;
 }
 
-@media (max-width: 500px){
-  .quotes{
-    width: 80vw;
+.new-quote:hover:not(:disabled) {
+  background-color: #e6c600;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.new-quote:focus {
+  outline: 2px solid #333;
+  outline-offset: 2px;
+}
+
+.new-quote:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.new-quote:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Loading State */
+.loading-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-top: 2px solid #ffd90f;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error State */
+.error-message {
+  padding: 15px;
+  background-color: #fee;
+  color: #c33;
+  border-radius: 8px;
+  border-left: 4px solid #c33;
+  margin: 10px 0;
+  text-align: left;
+}
+
+.error-icon {
+  margin-right: 8px;
+}
+
+/* Empty State */
+.empty-state {
+  padding: 30px;
+  text-align: center;
+  color: #666;
+}
+
+.empty-state p {
+  margin: 0 0 15px 0;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .quotes {
+    width: 60vw;
+  }
+  
+  .quote-container {
+    background-size: 120px;
+  }
+}
+
+@media (max-width: 500px) {
+  .app {
+    font-size: calc(10px + 1.2vmin);
+    padding: 20px;
+  }
+  
+  .quotes {
+    width: 90vw;
+    padding: 15px;
+  }
+  
+  blockquote p {
+    font-size: 1rem;
+    padding: 10px;
+  }
+  
+  blockquote p::before {
+    font-size: 1.5rem;
+  }
+  
+  .new-quote {
+    font-size: 14px;
+    padding: 12px 20px;
+    min-width: 120px;
+  }
+  
+  .quote-container {
+    background-size: 80px;
+    background-position: right 10px top 10px;
   }
 }

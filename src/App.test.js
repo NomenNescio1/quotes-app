@@ -1,9 +1,15 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import App from './App';
+import { render, screen } from '@testing-library/react';
+import { Quotes } from './Quotes';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('renders Simpsons quote generator', () => {
+  render(<Quotes />);
+  const titleElement = screen.getByText(/The Simpsons Quote Generator v2/i);
+  expect(titleElement).toBeInTheDocument();
+});
+
+test('renders subtitle', () => {
+  render(<Quotes />);
+  const subtitleElement = screen.getByText(/\(Mostly Homer\)/i);
+  expect(subtitleElement).toBeInTheDocument();
 });

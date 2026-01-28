@@ -1,8 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import './index.css';
 import { Quotes } from './Quotes';
 
-ReactDOM.render(<Quotes />, document.getElementById('root'));
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(<Quotes />)
 
 
